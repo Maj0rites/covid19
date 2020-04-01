@@ -28,12 +28,6 @@ class Help(commands.Cog):
             )
         embed.add_field(name='```.c stat <country/all> <state>```', value='Show **Confirmed** (new cases), **Deaths** (new deaths), and **Recovered** \n React with 📈 for a linear graph or 📉 for a log graph \n •For any country you may type the **full name** or **[ISO 3166-1 codes](https://en.wikipedia.org/wiki/ISO_3166-1)** \n __Example:__ **.c stat Italy** | **.c stat IT** | **.c stat ITA** \n •If the country or state\'s full name is two words, enclose them in **quotation marks** \n __Example:__ **.c stat "South Korea"** | **.c stat US "New York"** \n •If you would like stats on a specific **state (full name or abbreviated)** in the US, put it after the country name \n __Example:__ **.c stat US California** or **.c stat US CA**', inline=False)
         embed.add_field(name='```.c graph <linear/log> <confirmed/recovered/deaths> <country names>```', value='Display graph for a single country or multiple countries, choose between graph type and case type | Same rules for country names apply \n __Example:__ **.c graph log deaths nl deu ita usa chn kor jpn esp**')
-        embed.add_field(name='```.c reddit <category>```', value='Return posts of given category from [r/Coronavirus](https://www.reddit.com/r/Coronavirus/) \n Shows 5 posts at a time (up to first 15) Use ⬅️ and ➡️ to scroll through \n **<category>** - `Hot` | `New` | `Top`', inline=False)
-        embed.add_field(name='```.c info```', value='Return additional info about the bot such as server and user count', inline=False)
-        embed.add_field(name='```.c support```', value='Return invite link to support server', inline=False)
-        embed.add_field(name='Bot Source Code', value='<:github:689501322969350158> [Github](https://github.com/picklejason/coronavirus-bot)') #If you self host this bot or use any part of this source code, I would be grateful if you leave this in or credit me somewhere else
-        embed.add_field(name='Bot Invite', value='<:discord:689486285349715995> [Link](https://discordapp.com/api/oauth2/authorize?client_id=683462722368700526&permissions=59456&scope=bot)')
-        embed.add_field(name='Donate', value='<:Kofi:689483361785217299> [Ko-fi](https://ko-fi.com/picklejason)')
         await ctx.send(embed=embed)
 
     @commands.command(name='info', aliases=['about', 'vote', 'invite', 'donate'])

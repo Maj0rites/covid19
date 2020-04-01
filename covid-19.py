@@ -54,3 +54,8 @@ class Coronavirus(commands.AutoShardedBot):
             self.load_extension('cogs.Stats')
             logger.info('Reloaded Stats')
             await asyncio.sleep(600)
+            
+            
+if __name__ == '__main__':
+    bot = Coronavirus()
+    bot.run(config.token)
